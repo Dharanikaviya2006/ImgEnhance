@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HE5 | Professional Image Optimization Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">
+                HE<span>5</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#real-performance-impact" data-nav="features">Features</a></li>
+                <li><a href="#workflow">How It Works</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a id="get-started" href="#contact" class="cta-button nav-cta btn primary-btn" aria-label="Get started (scroll to contact)">Get Started</a></li>
+            </ul>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-background" aria-hidden="true">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+
+        <div class="hero-content fade-in">
+            <div class="premium-badge">✨ Advanced Image Optimization Engine</div>
+            <h1>
+                Transform Images Into<br>
+                <span class="gradient-text">Professional Quality</span> Visuals
+            </h1>
+            <p>
+                Automatically converts images into modern WEBP format for maximum performance—ideal for both
+                your WordPress workflow and developer integrations.
+            </p>
+            <div class="hero-buttons">
+            <div style="margin: 18px auto 0; display:flex; gap:10px; justify-content:center; flex-wrap:wrap; max-width: 650px;">
+                <span class="stat-badge">WEBP Ready</span>
+                <span class="stat-badge">Auto WEBP Conversion</span>
+                <span class="stat-badge">Smart Compression</span>
+                <span class="stat-badge">Performance Optimized</span>
+            </div>
+                <a href="#demo" class="btn primary-btn">
+                    View Interactive Demo
+                </a>
+                <a href="#features" class="btn secondary-btn">
+                    Explore Features
+                </a>
+            </div>
+        </div>
+
+        <div class="dashboard-mockup fade-in">
+            <div class="mockup-panel left-panel">
+                <div class="panel-card upload-panel">
+                    <div class="icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    </div>
+                    <div class="panel-text">
+                        <h4>Upload Panel</h4>
+                        <p>Drag & drop ready</p>
+                    </div>
+                </div>
+                <div class="panel-card processing-panel">
+                    <div class="icon-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div class="panel-text">
+                        <h4>Processing</h4>
+                        <p>Smart Image Optimization</p>
+                    </div>
+                    <div class="mockup-progress"><div class="progress-fill"></div></div>
+                </div>
+            </div>
+
+            <div class="mockup-center">
+                <img src="after.jpg" alt="Optimized Result" data-role="after" data-scene="portrait" class="mockup-main-img">
+                <div class="mockup-overlay">
+                    <div class="overlay-stats">
+                        <span class="stat-badge">Professional Quality Processing Complete</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mockup-panel right-panel">
+                <div class="panel-card score-panel">
+                    <h4>Quality Score</h4>
+                    <div class="score-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="98, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <div class="score-text">98</div>
+                    </div>
+                </div>
+                <div class="panel-card resolution-panel">
+                    <h4>Resolution Improvement</h4>
+                    <p class="res-value">4X</p>
+                </div>
+                <button class="mockup-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download Result
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPTIMIZATION DEMO STUDIO -->
+    <section class="comparison-section" id="demo" data-he5-demo>
+        <div class="section-title fade-in">
+            <h2>Optimization <span class="gradient-text">Studio</span></h2>
+            <p>Drag to compare. Review optimization outcomes with professional workflows.</p>
+        </div>
+
+        <div class="he5-studio fade-in">
+            <!-- IMAGE WORKSPACE (70%) -->
+            <div class="studio-workspace">
+                <div class="studio-workspace-topbar" aria-hidden="true">
+                    <div class="studio-tabs">
+                        <button class="studio-tab is-active" type="button" data-scene-tab="portrait">Portrait</button>
+                        <button class="studio-tab" type="button" data-scene-tab="landscape">Landscape</button>
+                        <button class="studio-tab" type="button" data-scene-tab="city">Old Photo</button>
+                        <button class="studio-tab" type="button" data-scene-tab="product">Product</button>
+                        <button class="studio-tab" type="button" data-scene-tab="nature">Nature</button>
+                    </div>
+                    <div class="studio-divider-vert"></div>
+                    <div class="studio-workspace-hint">
+                        <span class="hint-dot"></span>
+                        <span>Touch & mouse supported</span>
+                    </div>
+                </div>
+
+                <div class="comparison-container he5-comparison" data-workspace>
+                    <!-- After -->
+                    <img src="after.jpg" alt="Optimized workspace image" data-role="after" data-scene="portrait" class="comparison-image" loading="lazy" data-workspace-after>
+
+                    <!-- Before -->
+                    <div class="before-image-wrapper" data-workspace-before>
+                        <img src="before.jpg" alt="Original workspace image" data-role="before" data-scene="portrait" class="comparison-image" loading="lazy" data-workspace-before-img>
+                    </div>
+
+
+                    <!-- Divider -->
+                    <div class="comparison-divider" aria-hidden="true">
+                        <span class="comparison-handle">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="14 18 8 12 14 6"></polyline>
+                            </svg>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="10 18 16 12 10 6"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <!-- Badges -->
+                    <span class="comparison-label before-label">Original Image</span>
+                    <span class="comparison-label after-label">Optimized Image</span>
+
+
+                    <!-- Range control (kept for existing JS logic) -->
+                    <input type="range" min="0" max="100" value="50" class="comparison-range" aria-label="Drag to compare before and after image">
+                </div>
+
+                <!-- PRESET THUMBNAILS -->
+                <div class="studio-presets" role="tablist" aria-label="Optimization presets">
+
+                    <button class="preset-card is-selected" type="button" data-preset="portrait" aria-selected="true">
+                        <img src="portraitbefore.jpg" alt="Portrait preset preview">
+                        <span>Portrait</span>
+                    </button>
+                    <button class="preset-card" type="button" data-preset="landscape" aria-selected="false">
+                        <img src="landscapebefore.jpg" alt="Landscape preset preview">
+                        <span>Landscape</span>
+                    </button>
+                    <button class="preset-card" type="button" data-preset="city" aria-selected="false">
+                        <img src="oldbefore.jpg" alt="Old photo preset preview">
+                        <span>Old Photo</span>
+                    </button>
+                    <button class="preset-card" type="button" data-preset="product" aria-selected="false">
+                        <img src="productbefore.jpg" alt="Product preset preview">
+                        <span>Product</span>
+                    </button>
+                    <button class="preset-card" type="button" data-preset="nature" aria-selected="false">
+                        <img src="before.jpg" alt="Nature preset preview">
+                        <span>Nature</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CONTROL PANEL (30%) -->
+            <div class="studio-panel" aria-label="AI Image Optimization information" data-mobile-hide>
+                <div class="panel-header">
+                    <div class="panel-title">AI Image Optimization</div>
+                    <div class="panel-subtitle">Single, intelligent workflow</div>
+                </div>
+
+                <div class="panel-section">
+                    <p style="color: var(--text-muted); font-weight: 600; font-size: 14px; line-height: 1.6; margin: 0 0 16px;">
+                        Our optimization engine automatically improves image quality, clarity, compression efficiency, and delivery performance using a single intelligent workflow.
+                    </p>
+
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <div style="display:flex; align-items:center; gap:10px; font-weight:800;">
+                            <span style="color: var(--primary);">✓</span> Quality Optimization
+                        </div>
+                        <div style="display:flex; align-items:center; gap:10px; font-weight:800;">
+                            <span style="color: var(--primary);">✓</span> Smart Compression
+                        </div>
+                        <div style="display:flex; align-items:center; gap:10px; font-weight:800;">
+                            <span style="color: var(--primary);">✓</span> Resolution Preservation
+                        </div>
+                        <div style="display:flex; align-items:center; gap:10px; font-weight:800;">
+                            <span style="color: var(--primary);">✓</span> Faster Delivery
+                        </div>
+                        <div style="display:flex; align-items:center; gap:10px; font-weight:800;">
+                            <span style="color: var(--primary);">✓</span> Web Performance Ready
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <div class="panel-footnote">Presets update the comparison scene (demo mode).</div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- STATS / REAL PERFORMANCE IMPACT -->
+    <section id="real-performance-impact" class="stats-section" aria-label="Real Performance Impact">
+        <div class="stats-bg" aria-hidden="true"></div>
+
+        <div class="he5-optimization-showcase fade-in">
+            <div class="he5-optimization-showcase__heading">
+                <h2 class="he5-optimization-showcase__title">Real Performance Impact</h2>
+                <p class="he5-optimization-showcase__desc">Before vs after migration—built to deliver maximum WEBP performance and visible Core Web Vitals improvements.</p>
+            </div>
+
+                <div class="he5-optimization-showcase__image" aria-hidden="true">
+                <div class="he5-optimization-showcase__badge" aria-hidden="true">
+                    <div class="he5-optimization-showcase__badge-top">⚡ AI Enhanced</div>
+                    <div class="he5-optimization-showcase__badge-bottom">98% Optimization Accuracy</div>
+                </div>
+
+                <div class="he5-optimization-showcase__slider" data-slider>
+                    <img class="he5-optimization-showcase__slide is-active" src="portraitafter.jpg" alt="" loading="lazy">
+                    <img class="he5-optimization-showcase__slide" src="Image1.jpg" alt="" loading="lazy">
+                    <img class="he5-optimization-showcase__slide" src="Image2.jpg" alt="" loading="lazy">
+                    <img class="he5-optimization-showcase__slide" src="Image3.jpg" alt="" loading="lazy">
+                    <img class="he5-optimization-showcase__slide" src="landscapeafter.jpg" alt="" loading="lazy">
+                    <img class="he5-optimization-showcase__slide" src="after.jpg" alt="" loading="lazy">
+                </div>
+            </div>
+
+            <div class="he5-optimization-showcase__metrics" role="list" aria-label="Performance metrics">
+                <div class="he5-kpi" role="listitem" style="transition-delay: 0s;">
+                    <div class="he5-kpi__circle" aria-hidden="true">
+                        <div class="he5-kpi__value">
+                            <span class="counter" data-target="96">0</span><span class="he5-kpi__suffix">/</span><span class="he5-kpi__suffix">100</span>
+                        </div>
+                    </div>
+                    <div class="he5-kpi__label">After Migration PageSpeed Score</div>
+                </div>
+
+                <div class="he5-kpi" role="listitem" style="transition-delay: 0.06s;">
+                    <div class="he5-kpi__circle" aria-hidden="true">
+                        <div class="he5-kpi__value">
+                            <span class="counter" data-target="4">0</span><span class="he5-kpi__suffix">x</span>
+                        </div>
+                    </div>
+                    <div class="he5-kpi__label">Faster Delivery</div>
+                </div>
+
+                <div class="he5-kpi" role="listitem" style="transition-delay: 0.12s;">
+                    <div class="he5-kpi__circle" aria-hidden="true">
+                        <div class="he5-kpi__value">
+                            <span class="counter" data-target="3">0</span><span class="he5-kpi__suffix">MB</span>
+                        </div>
+                    </div>
+                    <div class="he5-kpi__label">After Optimization Total Image Weight</div>
+                </div>
+
+                <div class="he5-kpi" role="listitem" style="transition-delay: 0.18s;">
+                    <div class="he5-kpi__circle" aria-hidden="true">
+                        <div class="he5-kpi__value">
+                            <span class="counter" data-target="1">0</span><span class="he5-kpi__suffix">.4s</span>
+                        </div>
+                    </div>
+                    <div class="he5-kpi__label">After HE5 Page Load Time</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 34px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; align-items: start;">
+            <div class="feature-card" style="padding: 18px 16px; border-radius: 20px; background: rgba(255, 255, 255, 0.03); box-shadow: none; border: 1px solid rgba(255,255,255,0.08); transform: none;">
+                <div style="color: var(--primary); font-weight: 900; font-size: 18px;">▲ 75% Faster Loading</div>
+            </div>
+            <div class="feature-card" style="padding: 18px 16px; border-radius: 20px; background: rgba(255, 255, 255, 0.03); box-shadow: none; border: 1px solid rgba(255,255,255,0.08); transform: none;">
+                <div style="color: var(--primary); font-weight: 900; font-size: 18px;">▲ 70% Smaller Images</div>
+            </div>
+            <div class="feature-card" style="padding: 18px 16px; border-radius: 20px; background: rgba(255, 255, 255, 0.03); box-shadow: none; border: 1px solid rgba(255,255,255,0.08); transform: none;">
+                <div style="color: var(--primary); font-weight: 900; font-size: 18px;">▲ Improved SEO Scores</div>
+            </div>
+            <div class="feature-card" style="padding: 18px 16px; border-radius: 20px; background: rgba(255, 255, 255, 0.03); box-shadow: none; border: 1px solid rgba(255,255,255,0.08); transform: none;">
+                <div style="color: var(--primary); font-weight: 900; font-size: 18px;">▲ Better Core Web Vitals</div>
+            </div>
+            <div class="feature-card" style="padding: 18px 16px; border-radius: 20px; background: rgba(255, 255, 255, 0.03); box-shadow: none; border: 1px solid rgba(255,255,255,0.08); transform: none;">
+                <div style="color: var(--primary); font-weight: 900; font-size: 18px;">▲ Reduced Server Bandwidth</div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- HOW IT WORKS -->
+    <section id="workflow" class="workflow-section">
+        <div class="section-title fade-in">
+            <h2>Seamless <span class="gradient-text">Workflow</span></h2>
+            <p>From upload to a WEBP-ready optimized output in just seconds.</p>
+        </div>
+
+        <div class="workflow">
+            <div class="workflow-step fade-in">
+                <div class="workflow-media" role="img" aria-label="Upload image">
+                    <img src="UploadImage.jpg" alt="Upload demo image">
+                    <span class="workflow-media-overlay" aria-hidden="true"></span>
+                </div>
+
+                <div class="workflow-icon glow-effect">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                </div>
+                <h3>1. Upload</h3>
+                <p>Drop your image into the secure processing portal.</p>
+            </div>
+            <div class="workflow-step fade-in" style="transition-delay: 0.1s;">
+                <div class="workflow-media" role="img" aria-label="Analyze image">
+                    <img src="ImageAnalysis.jpg" alt="Analyze demo image">
+                    <span class="workflow-media-overlay" aria-hidden="true"></span>
+                </div>
+
+                <div class="workflow-icon glow-effect">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+                <h3>2. Analyze</h3>
+                <p>Our engine maps textures, artifacts, and compression opportunities.</p>
+            </div>
+            <div class="workflow-step fade-in" style="transition-delay: 0.2s;">
+
+                <div class="workflow-media" role="img" aria-label="Optimize image">
+                    <img src="Enhance Image.jpg" alt="Optimization demo image">
+                    <span class="workflow-media-overlay" aria-hidden="true"></span>
+                </div>
+
+
+                <div class="workflow-icon glow-effect">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <h3>3. Optimize</h3>
+                <p>Professional optimization is applied in real-time.</p>
+            </div>
+            <div class="workflow-step fade-in" style="transition-delay: 0.3s;">
+                <div class="workflow-media" role="img" aria-label="Convert to WEBP">
+                    <img src="Conversion.png" alt="WEBP conversion demo image">
+                    <span class="workflow-media-overlay" aria-hidden="true"></span>
+                </div>
+
+                <div class="workflow-icon glow-effect">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </div>
+                <h3>4. Convert to WEBP</h3>
+                <p>Convert to modern WEBP for smaller file sizes and faster delivery.</p>
+            </div>
+            <div class="workflow-step fade-in" style="transition-delay: 0.4s;">
+                <div class="workflow-media" role="img" aria-label="Download optimized WEBP image">
+                    <img src="DownloadImage.jpg" alt="Download demo image">
+                    <span class="workflow-media-overlay" aria-hidden="true"></span>
+                </div>
+
+                <div class="workflow-icon glow-effect">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </div>
+                <h3>5. Download</h3>
+                <p>Export your optimized WEBP output instantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="section-title fade-in">
+            <h2>Trusted by <span class="gradient-text">Teams</span></h2>
+            <p>Built for image-heavy workflows—optimization, compression efficiency, and web-ready output.</p>
+        </div>
+
+        <div class="testimonial-grid">
+            <div class="testimonial-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"HE5 streamlines our image optimization workflow. The resulting WEBP-ready output is consistent and production-ready."</p>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://i.pravatar.cc/100?img=1" alt="Sarah">
+                    </div>
+                    <div class="user-details">
+                        <h4>Sarah L. <span class="verified-badge">✔</span></h4>
+                        <p>Professional Photographer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"We use HE5 for all our e-commerce product shots. It saves us hours of retouching and delivers crystal clear results every time."</p>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://i.pravatar.cc/100?img=11" alt="John">
+                    </div>
+                    <div class="user-details">
+                        <h4>John M. <span class="verified-badge">✔</span></h4>
+                        <p>E-commerce Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card fade-in">
+                <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The smartest WEBP-ready optimization workflow we've used. Outputs load faster and look natural in production."</p>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="https://i.pravatar.cc/100?img=33" alt="David">
+                    </div>
+                    <div class="user-details">
+                        <h4>David R. <span class="verified-badge">✔</span></h4>
+                        <p>Lead Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="section-title fade-in">
+            <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+            <p>Everything you need to know about the product and billing.</p>
+        </div>
+
+        <div class="faq-container fade-in">
+            <div class="faq-item active">
+                <button class="faq-question">
+                    What makes HE5 different from other upscalers?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>HE5 uses a proprietary optimization workflow designed for professional use cases. It helps preserve important visual characteristics while improving clarity and export efficiency.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What file formats are supported?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>We support common formats including JPG, PNG, WEBP, and RAW files. Output is available in modern WEBP for smaller file sizes and faster delivery.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is there a limit on image resolution?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Our plans support large input images for enterprise pipelines, with configurable processing that preserves detail while optimizing export for web delivery.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you offer API access?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, API access is available on our Enterprise plan, featuring high-throughput processing, webhooks, and documentation for integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API SECTION -->
+    <section id="api" class="api-section">
+        <div class="section-title fade-in">
+            <h2>HE5 Optimization <span class="gradient-text">API</span></h2>
+            <p>Integrate lightning-fast image optimization directly into your applications.</p>
+        </div>
+
+        <div class="pricing-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 1200px;">
+            <div class="pricing-card" style="grid-column: 1 / span 3;">
+                <div class="pricing-tier" style="font-size: 26px; font-weight: 900; margin-bottom: 14px; color: var(--text-main);">Automatically converts images into modern WEBP format for maximum performance.</div>
+                <ul class="pricing-features" style="margin-top: 0; margin-bottom: 28px;">
+                    <li>Convert images automatically to .WEBP format</li>
+                    <li>Optimize uploaded images in real-time</li>
+                    <li>Reduce file size without visible quality loss</li>
+                    <li>Faster website delivery</li>
+                    <li>Developer-friendly REST API</li>
+                    <li>Bulk image processing</li>
+                    <li>Scalable cloud optimization</li>
+                    <li>Easy integration with websites, apps, CMS platforms, and e-commerce stores</li>
+                </ul>
+                <div style="display:flex; justify-content:center;">
+                    <a href="#pricing" class="btn primary-btn" style="max-width: 520px; width: 100%;">Get API Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORDPRESS PLUGIN SECTION -->
+    <section id="wordpress" class="wordpress-section">
+        <div class="section-title fade-in">
+            <h2>HE5 WordPress <span class="gradient-text">Optimization Plugin</span></h2>
+            <p>One-click setup that automatically converts uploads into modern WEBP for faster WordPress image delivery.</p>
+        </div>
+
+        <div class="pricing-grid" style="max-width: 1100px;">
+            <div class="pricing-card featured" style="transform: none;">
+                <div class="featured-badge">WEBP Ready</div>
+                <div class="pricing-tier">WordPress Plugin</div>
+                <div class="pricing-price" style="font-size: 34px; margin-bottom: 18px;">Automatic WEBP Conversion</div>
+                <ul class="pricing-features" style="margin-bottom: 24px;">
+                    <li>One-click installation</li>
+                    <li>Automatic WEBP conversion</li>
+                    <li>Bulk media library optimization</li>
+                    <li>Faster page loading</li>
+                    <li>SEO-friendly image delivery</li>
+                    <li>Works with existing WordPress themes</li>
+                    <li>Automatic optimization on upload</li>
+                    <li>No coding required</li>
+                </ul>
+                <a href="#pricing" class="btn primary-btn pricing-btn">Download Plugin</a>
+            </div>
+
+            <div class="pricing-card" style="transform: none;">
+                <div class="pricing-tier">Smart Compression</div>
+                <div class="pricing-price" style="font-size: 34px; margin-bottom: 18px;">Performance Optimized</div>
+                <ul class="pricing-features" style="margin-bottom: 24px;">
+                    <li>Auto WEBP Conversion badges</li>
+                    <li>Smart Compression</li>
+                    <li>Performance Optimized delivery</li>
+                    <li>Reduced bandwidth consumption</li>
+                </ul>
+                <a href="#demo" class="btn secondary-btn pricing-btn">See WEBP Results</a>
+            </div>
+
+            <div class="pricing-card" style="transform: none;">
+                <div class="pricing-tier">Works Everywhere</div>
+                <div class="pricing-price" style="font-size: 34px; margin-bottom: 18px;">Existing Site Ready</div>
+                <ul class="pricing-features" style="margin-bottom: 24px;">
+                    <li>Compatible with typical image-heavy themes</li>
+                    <li>Optimizes existing media library</li>
+                    <li>Maintains professional quality</li>
+                </ul>
+                <a href="#contact" class="btn secondary-btn pricing-btn">Talk to Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY WEBP IS FASTER -->
+    <section id="why-webp" class="why-webp-section">
+        <div class="section-title fade-in">
+            <h2>Why WEBP <span class="gradient-text">Is Faster</span></h2>
+            <p>Automatically converts images into modern WEBP format for maximum performance.</p>
+        </div>
+
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start;">
+                <div class="panel-card" style="padding: 26px;">
+                    <div style="font-size: 18px; font-weight: 900; color: var(--text-main); margin-bottom: 14px;">What you get</div>
+                    <ul class="pricing-features" style="margin-bottom: 0;">
+                        <li>WEBP files are significantly smaller than JPG and PNG</li>
+                        <li>Faster image delivery improves website speed</li>
+                        <li>Reduced bandwidth consumption</li>
+                        <li>Better mobile browsing experience</li>
+                        <li>Improved Core Web Vitals</li>
+                        <li>Better Google PageSpeed scores</li>
+                        <li>Faster page rendering</li>
+                        <li>Higher SEO performance</li>
+                    </ul>
+                </div>
+
+                <div class="panel-card" style="padding: 26px;">
+                    <div style="font-size: 18px; font-weight: 900; color: var(--text-main); margin-bottom: 14px;">Approximate savings</div>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                        <div class="feature-card" style="padding: 18px 16px; border-radius: 20px; margin:0; background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); transform:none;">
+                            <div style="font-weight: 1000; color: var(--secondary); margin-bottom: 8px;">PNG → WEBP</div>
+                            <div style="color: var(--text-muted); font-weight: 700;">Up to 70% smaller file size</div>
+                            <div style="margin-top: 10px; display:flex; gap:10px; align-items:center; color: var(--primary); font-weight: 900;">WEBP Ready</div>
+                        </div>
+                        <div class="feature-card" style="padding: 18px 16px; border-radius: 20px; margin:0; background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); transform:none;">
+                            <div style="font-weight: 1000; color: var(--secondary); margin-bottom: 8px;">JPG → WEBP</div>
+                            <div style="color: var(--text-muted); font-weight: 700;">Up to 70% smaller file size</div>
+                            <div style="margin-top: 10px; display:flex; gap:10px; align-items:center; color: var(--primary); font-weight: 900;">Auto WEBP Conversion</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 16px; display:flex; gap:10px; flex-wrap:wrap;">
+                        <span class="stat-badge">WEBP Ready</span>
+                        <span class="stat-badge">Auto WEBP Conversion</span>
+                        <span class="stat-badge">Smart Compression</span>
+                        <span class="stat-badge">Performance Optimized</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-title fade-in">
+            <h2>Pricing <span class="gradient-text">Plans</span></h2>
+            <p>Choose the product that fits your workflow—WordPress Plugin or Developer API.</p>
+        </div>
+
+        <div class="pricing-grid" style="max-width: 1300px; grid-template-columns: repeat(3, 1fr); align-items: stretch;">
+            <div class="pricing-card" style="transform: none;">
+                <div class="pricing-tier" style="font-weight: 900;">Starter Plugin</div>
+                <div class="pricing-price">₹999<span>/year</span></div>
+                <ul class="pricing-features">
+                    <li>Automatic WEBP Conversion</li>
+                    <li>Bulk Optimization</li>
+                    <li>Unlimited Website Usage</li>
+                    <li>Updates Included</li>
+                </ul>
+                <a href="#wordpress" class="btn primary-btn pricing-btn">Choose Plugin</a>
+            </div>
+
+            <div class="pricing-card featured" style="transform: none;">
+                <div class="featured-badge">Most Popular</div>
+                <div class="pricing-tier" style="font-weight: 900;">Professional Plugin</div>
+                <div class="pricing-price">₹2499<span>/year</span></div>
+                <ul class="pricing-features">
+                    <li>Everything in Starter</li>
+                    <li>Priority Support</li>
+                    <li>Advanced Compression</li>
+                    <li>Future Feature Updates</li>
+                </ul>
+                <a href="#wordpress" class="btn primary-btn pricing-btn">Download Plugin</a>
+            </div>
+
+            <div class="pricing-card" style="transform: none;">
+                <div class="pricing-tier" style="font-weight: 900;">Developer API</div>
+                <div class="pricing-price">Pay As You Go</div>
+                <ul class="pricing-features">
+                    <li>Developer Image Optimization API</li>
+                    <li>Real-time and bulk processing</li>
+                    <li>Automatic WEBP conversion outputs</li>
+                </ul>
+                <a href="#api" class="btn secondary-btn pricing-btn">Get API Access</a>
+            </div>
+        </div>
+
+        <div style="height: 18px;"></div>
+
+        <div class="pricing-grid" style="max-width: 1300px; grid-template-columns: repeat(3, 1fr); align-items: stretch;">
+            <div class="pricing-card" style="transform: none;">
+                <div class="pricing-tier" style="font-weight: 900;">Business API</div>
+                <div class="pricing-price">Monthly Subscription</div>
+                <ul class="pricing-features">
+                    <li>Scalable cloud optimization</li>
+                    <li>Bulk image processing</li>
+                    <li>Improved delivery performance</li>
+                </ul>
+                <a href="#api" class="btn secondary-btn pricing-btn">Start Business</a>
+            </div>
+
+            <div class="pricing-card" style="transform: none;">
+                <div class="pricing-tier" style="font-weight: 900;">Enterprise API</div>
+                <div class="pricing-price">Custom Pricing</div>
+                <ul class="pricing-features">
+                    <li>High-throughput workflows</li>
+                    <li>Advanced integration support</li>
+                    <li>Custom SLAs and onboarding</li>
+                </ul>
+                <a href="#contact" class="btn primary-btn pricing-btn">Contact Sales</a>
+            </div>
+
+            <div class="pricing-card" style="transform: none;">
+                <div class="pricing-tier" style="font-weight: 900;">WordPress + API</div>
+                <div class="pricing-price" style="font-size: 28px;">Best for hybrid teams</div>
+                <ul class="pricing-features">
+                    <li>Automatic WEBP conversion everywhere</li>
+                    <li>Unified performance goals</li>
+                    <li>For websites, apps, CMS and e-commerce</li>
+                </ul>
+                <a href="#contact" class="btn secondary-btn pricing-btn">Talk to Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT (moved up: directly after Workflow) -->
+    <section id="contact" class="contact-section">
+
+        <div class="contact-bg" aria-hidden="true"></div>
+
+        <div class="contact-header fade-in">
+            <h2 class="contact-heading">Get in <span class="contact-accent">Touch</span></h2>
+            <p class="contact-description">Need help with image optimization, WEBP conversion, or enterprise solutions? Our team is ready to assist you.</p>
+        </div>
+
+        <div class="contact-layout fade-in">
+            <div class="contact-container" aria-label="Contact form">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn contact-submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info" aria-label="Contact information">
+                <div class="contact-info-card">
+                    <div class="contact-info-icon" aria-hidden="true">📧</div>
+                    <div class="contact-info-text">
+                        <div class="contact-info-title">support@he5.com</div>
+                        <div class="contact-info-sub">Email support</div>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-info-icon" aria-hidden="true">⚡</div>
+                    <div class="contact-info-text">
+                        <div class="contact-info-title">Response within 24 hours</div>
+                        <div class="contact-info-sub">Fast turnaround</div>
+                    </div>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-info-icon" aria-hidden="true">🌍</div>
+                    <div class="contact-info-text">
+                        <div class="contact-info-title">Global support available</div>
+                        <div class="contact-info-sub">Worldwide teams</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>HE<span>5</span></h3>
+                <p>Professional image optimization for creators, photographers, and innovative businesses.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    <a href="#" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#real-performance-impact" data-nav="features">Features</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Get the latest news and updates delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" required>
+                    <button type="submit" class="btn primary-btn">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 HE5 Platform. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
