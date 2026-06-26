@@ -906,7 +906,7 @@ header.scrolled {
   opacity: 0;
   cursor: ew-resize;
   z-index: 5;
-  touch-action: none;
+  touch-action: pan-y;
   appearance: none;
 }
 
@@ -1136,10 +1136,11 @@ header.scrolled {
     overscroll-behavior-x: none;
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    touch-action:pan-y;
   }
 
   body {
-    touch-action: manipulation;
+    touch-action: auto;
   }
 
   header,
@@ -1156,7 +1157,7 @@ header.scrolled {
   select,
   [role="button"] {
     -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
+    touch-action: manipulationS;
     -webkit-touch-callout: none;
   }
 
