@@ -481,6 +481,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let isDragging = false;
     let resizeObserver;
+    let dragStartX = 0;
+    let dragStartY = 0;
 
     const updateComparison = (value) => {
       const safeValue = Math.min(100, Math.max(0, Number(value)));
@@ -507,8 +509,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     comparisonContainer.addEventListener('pointerdown', (event) => {
-      if (window.matchMedia('(max-width: 768px)').matches) event.preventDefault();
       isDragging = true;
+      dragStartX = event.clientX;
+      dragStartY = event.clientY;
       comparisonContainer.classList.add('dragging');
       comparisonContainer.setPointerCapture(event.pointerId);
       setSliderFromPosition(event.clientX);
@@ -516,7 +519,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const handlePointermove = (event) => {
       if (!isDragging) return;
-      if (window.matchMedia('(max-width: 768px)').matches) event.preventDefault();
+
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      const deltaX = event.clientX - dragStartX;
+      const deltaY = event.clientY - dragStartY;
+
+      if (isMobile && event.pointerType === 'touch' && Math.abs(deltaY) > Math.abs(deltaX)) {
+        return;
+      }
+
+      if (isMobile && event.pointerType === 'touch') {
+        event.preventDefault();
+      } else if (event.pointerType !== 'touch') {
+        event.preventDefault();
+      }
+
       const rect = comparisonContainer.getBoundingClientRect();
       let percentage = ((event.clientX - rect.left) / rect.width) * 100;
       percentage = Math.max(0, Math.min(100, percentage));
