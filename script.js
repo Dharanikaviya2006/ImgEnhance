@@ -280,6 +280,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const beforeWrap = activeComparison.querySelector('.before-image-wrapper[data-workspace-before]');
     const beforeImg = activeComparison.querySelector('img[data-workspace-before-img]');
     const range = activeComparison.querySelector('.comparison-range');
+    
+
+    let startX;
+let startY;
+
+range.addEventListener("touchstart",(e)=>{
+    startX=e.touches[0].clientX;
+    startY=e.touches[0].clientY;
+},{passive:true});
+
+range.addEventListener("touchmove",(e)=>{
+    const dx=Math.abs(e.touches[0].clientX-startX);
+    const dy=Math.abs(e.touches[0].clientY-startY);
+
+    if(dy>dx){
+        return;   // Allow normal page scrolling
+    }
+
+    // Slider update code here
+});
 
     if (afterImg && beforeImg) {
       // Ensure slider exists before we try to preserve it
