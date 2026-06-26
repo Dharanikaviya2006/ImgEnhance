@@ -4285,7 +4285,6 @@ footer-brand h3 {
     padding-top: 28px;
   }
 }
-
 @media (max-width: 768px) {
   /* Final mobile viewport audit: prevent page-level side scroll */
   html,
