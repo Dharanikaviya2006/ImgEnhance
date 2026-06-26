@@ -1110,12 +1110,16 @@ header.scrolled {
 @media (max-width: 768px) {
   /* Page rhythm */
   section {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 20px 16px;
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
+    margin-bottom: 32px;
+  }
+
+  section + section {
+    margin-top: 32px;
   }
 
   body {
@@ -1123,6 +1127,8 @@ header.scrolled {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
   }
 
   html {
@@ -1130,14 +1136,89 @@ header.scrolled {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
   }
 
-  /* Mobile menu click-blocking safety */
+  button,
+  a,
+  input,
+  textarea,
+  select,
+  [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+  }
+
   .nav-links {
     pointer-events: none;
   }
   .nav-links.active {
     pointer-events: auto;
+  }
+
+  .nav-links a,
+  .menu-btn,
+  .studio-tab,
+  .btn,
+  .pricing-btn,
+  .contact-submit,
+  .accordion-header,
+  .comparison-range,
+  .preset-card,
+  .footer-socials a {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+  }
+
+  .menu-btn {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .studio-tab {
+    padding: 12px 16px;
+  }
+
+  .btn,
+  .pricing-btn,
+  .contact-submit {
+    min-height: 48px;
+  }
+
+  .mobile-step-card,
+  .accordion-item,
+  .pricing-card,
+  .contact-form,
+  .contact-info-card,
+  .feature-card {
+    padding: 20px;
+  }
+
+  .accordion-header {
+    min-height: 48px;
+  }
+
+  .comparison-range {
+    min-height: 48px;
+  }
+
+  .footer-socials a {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* Mobile-only rebuild: comparison studio becomes app-like */
