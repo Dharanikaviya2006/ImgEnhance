@@ -23,10 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================
   const glow = document.body;
 
+  let mouseTimeout;
   document.addEventListener('mousemove', (e) => {
-    glow.style.setProperty('--x', `${e.clientX}px`);
-    glow.style.setProperty('--y', `${e.clientY}px`);
-  });
+    clearTimeout(mouseTimeout);
+    mouseTimeout = setTimeout(() => {
+      glow.style.setProperty('--x', `${e.clientX}px`);
+      glow.style.setProperty('--y', `${e.clientY}px`);
+    }, 16);
+  }, { passive: true });
 
   function createPlaceholder(role, scene = 'portrait') {
     const isAfter = role === 'after';
@@ -476,6 +480,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!slider || !beforeImage || !comparisonDivider) return;
 
     let isDragging = false;
+    let resizeObserver;
 
     const updateComparison = (value) => {
       const safeValue = Math.min(100, Math.max(0, Number(value)));
@@ -509,27 +514,37 @@ document.addEventListener('DOMContentLoaded', () => {
       setSliderFromPosition(event.clientX);
     });
 
-    window.addEventListener('pointermove', (event) => {
+    const handlePointermove = (event) => {
       if (!isDragging) return;
       if (window.matchMedia('(max-width: 768px)').matches) event.preventDefault();
       const rect = comparisonContainer.getBoundingClientRect();
       let percentage = ((event.clientX - rect.left) / rect.width) * 100;
       percentage = Math.max(0, Math.min(100, percentage));
       updateComparison(percentage);
-    });
+    };
 
     comparisonContainer.addEventListener('pointerup', stopDragging);
     comparisonContainer.addEventListener('pointercancel', stopDragging);
 
-    window.addEventListener('resize', () => {
-      updateComparison(slider.value);
-    });
+    // Use ResizeObserver instead of window resize for better performance
+    if ('ResizeObserver' in window) {
+      resizeObserver = new ResizeObserver(() => {
+        updateComparison(slider.value);
+      });
+      resizeObserver.observe(comparisonContainer);
+    } else {
+      window.addEventListener('resize', () => {
+        updateComparison(slider.value);
+      });
+    }
+
+    window.addEventListener('pointermove', handlePointermove);
   });
 
   // ==========================
   // STATS INDICATOR: animate only once (premium)
   // ==========================
-  const statsRoot = document.getElementById('stats');
+  const statsRoot = document.getElementById('real-performance-impact');
   if (statsRoot) {
     const onceAnimate = () => {
       if (!statsRoot.classList.contains('is-animated')) {
@@ -594,10 +609,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================
   const counters = document.querySelectorAll('.counter');
 
-
   counters.forEach((counter) => {
+    if (!counter || !counter.dataset.target) return;
+    
     const target = Number(counter.dataset.target);
+    if (isNaN(target)) return;
+    
     let count = 0;
+    let animationId;
 
     const updateCounter = () => {
       const increment = Math.ceil(target / 100);
@@ -606,7 +625,7 @@ document.addEventListener('DOMContentLoaded', () => {
         count += increment;
         if (count > target) count = target;
         counter.textContent = count;
-        setTimeout(updateCounter, 20);
+        animationId = setTimeout(updateCounter, 20);
       } else {
         counter.textContent = target;
       }
@@ -707,6 +726,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const year = new Date().getFullYear();
     copyright.innerHTML = `&copy; ${year} All Rights Reserved.`;
   }
+
+  // ==========================
+  // MOBILE ACCORDION FUNCTIONALITY
+  // ==========================
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach((header) => {
+    header.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const currentItem = header.closest('.accordion-item');
+      if (!currentItem) return;
+
+      const isCurrentActive = currentItem.classList.contains('active');
+
+      // Close all accordion items
+      accordionItems.forEach((item) => {
+        item.classList.remove('active');
+        const itemHeader = item.querySelector('.accordion-header');
+        if (itemHeader) {
+          itemHeader.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Open clicked item if it wasn't already open
+      if (!isCurrentActive) {
+        currentItem.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 
   console.log('Image Optimization Website Loaded Successfully');
 });
