@@ -3890,7 +3890,7 @@ footer-brand h3 {
     max-height: none;
     overflow: hidden;
     border-radius: 20px;
-    touch-action: none;
+    touch-action: pan-y;
   }
 
   .comparison-image,
@@ -3924,7 +3924,7 @@ footer-brand h3 {
   }
 
   .comparison-range {
-    touch-action: none;
+    touch-action: pan-y;
   }
 
   /* Presets stay desktop-only; tabs are the mobile selector */
@@ -4285,6 +4285,7 @@ footer-brand h3 {
     padding-top: 28px;
   }
 }
+
 @media (max-width: 768px) {
   /* Final mobile viewport audit: prevent page-level side scroll */
   html,
